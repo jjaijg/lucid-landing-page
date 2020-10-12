@@ -10,6 +10,16 @@ export const GlobalStyles = createGlobalStyle`
       return props.theme.fonts[0];
     }}
   }
+
+  body::-webkit-scrollbar {
+  width: 7px;
+  background: ${({ theme }) => theme.colors.darkBg};
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: ${({ theme }) => theme.colors.highlight};
+  border-radius: 5px;
+}
 `;
 
 export const Section1 = css`
