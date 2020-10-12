@@ -1,0 +1,10 @@
+export { default as Navbar } from "./Navbar";
+export { default as Sidebar } from "./Sidebar";
+export { default as HomeSection } from "./HomeSection";
+export { default as FeatureSec1 } from "./Features/FeatureSec1";
+export { default as FeatureSec2 } from "./Features/FeatureSec2";
+export { default as FeatureSec3 } from "./Features/FeatureSec3";
+export { default as TestimonialSection } from "./Testimonial";
+export { default as PricingSection } from "./Pricing";
+export { default as ContactSection } from "./contact";
+export { default as FooterSection } from "./Footer";
