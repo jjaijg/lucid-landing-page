@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { animateScroll as scroll } from "react-scroll";
 
@@ -14,15 +15,17 @@ import {
 } from "./Navbar.styled";
 
 import { SCROLL_OBJ, NAV_LINKS } from "../../data";
+import { setScrollNav } from "../../state/reducers/navReducer";
 
 const Navbar = ({ toggle }) => {
-  const [scrollNav, setScrollNav] = useState(false);
+  const dispatch = useDispatch();
+  const { scrollNav } = useSelector((state) => state.nav);
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
-      setScrollNav(true);
+      dispatch(setScrollNav(true));
     } else {
-      setScrollNav(false);
+      dispatch(setScrollNav(false));
     }
   };
 

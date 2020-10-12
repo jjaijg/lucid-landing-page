@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setDetails } from "../../state/reducers/contactReducer";
 
 import {
   FormContainer,
@@ -10,19 +12,14 @@ import {
 } from "./Contact.styled";
 
 const ContactForm = () => {
-  const [contactForm, setContactForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const dispatch = useDispatch();
+  const { name, email, subject, message } = useSelector(
+    (state) => state.contact
+  );
 
   const onDetailsChange = (e) => {
     const { name, value } = e.target;
-    setContactForm((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+    dispatch(setDetails({ name, value }));
   };
 
   return (
@@ -34,7 +31,7 @@ const ContactForm = () => {
             name="name"
             type="text"
             placeholder="NAME *"
-            value={contactForm.name}
+            value={name}
             onChange={onDetailsChange}
           />
           <FormInput
@@ -42,7 +39,7 @@ const ContactForm = () => {
             name="email"
             type="email"
             placeholder="EMAIL *"
-            value={contactForm.email}
+            value={email}
             onChange={onDetailsChange}
           />
           <FormInput
@@ -50,7 +47,7 @@ const ContactForm = () => {
             name="subject"
             type="text"
             placeholder="SUBJECT *"
-            value={contactForm.subject}
+            value={subject}
             onChange={onDetailsChange}
           />
         </FormCol>
@@ -59,7 +56,7 @@ const ContactForm = () => {
             id="message"
             name="message"
             placeholder="MESSAGE *"
-            value={contactForm.message}
+            value={message}
             onChange={onDetailsChange}
           />
         </FormCol>

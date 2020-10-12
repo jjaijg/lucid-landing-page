@@ -11,13 +11,13 @@ import {
   TestimonialLine,
   TestimonialBg,
   ImageBg,
-  TestimonialFooter,
-  Highlight,
-  TestimonialButton,
-  TestimonialCol,
-  TestimonialCol2,
-  TestimonialButton2,
-  TestimonialFooterDesc,
+  // TestimonialFooter,
+  // Highlight,
+  // TestimonialButton,
+  // TestimonialCol,
+  // TestimonialCol2,
+  // TestimonialButton2,
+  // TestimonialFooterDesc,
 } from "./Testimonial.styled";
 import TestimonialCard from "./TestimonialCard";
 
