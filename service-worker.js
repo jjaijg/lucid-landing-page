@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lucid-landing-page/precache-manifest.ae41ad2b38770ec6c58fa2d1db420792.js"
+  "/lucid-landing-page/precache-manifest.e05364db8ea1bbe81333fae00301db7a.js"
 );
 
 self.addEventListener('message', (event) => {
